@@ -44,6 +44,7 @@ docker-compose build --no-cache
 docker-compose up -d
 ```
 
+- Application should start at http://localhost:80
 - Presently, adding a new user of any kind is not possible
 - There are 3 users in built below are username/passwords for them
 
