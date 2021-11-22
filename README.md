@@ -12,9 +12,12 @@ Functionality:
 - Once an order is made, the order goes into different stages like ordered, received , inQueue and ready . The customer can monitor the progress of each order using the portal
 
 
-Technologies:
+Technologies and details:
 
-- The porject is created using MERN stack - Mongo DB, Express , React and Node
+- The porject is created using MERN stack - Mongo DB, Express , React and Node.
+- Frontend is built using React and uses Redux and Sagas for state management and APIs respectively
+- There are 2 backend servers , server-a accepts orders from the front end , makes an entry into Mongo db and then sends it for processing to server-b
+- server-b does updates status of the order (some dummy process that waits for 5 seconds). Once order is ready marks it as completed and sends it back to server-a
 - It can run inside docker.
 - It uses rabbitMQ to queue the incoming orders and then send updates about the order to the portal
 - It uses jwt for authentication
